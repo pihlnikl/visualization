@@ -5,34 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://d3js.org/d3.v3.js" defer></script> 
+    <script src="https://d3js.org/d3.v5.js" defer></script> 
     <script src="js/script.js" defer></script>
 
     <title>Projekt 3</title>
 </head>
 <body>
     <div class="container">
-        <input type="file" src="fram.json" id="init" hidden>
         <form>
-            <label for="gender">Välj kön:</label>
-            <select name="gender" id="gender">
-                <option value="Man">Man</option>
-                <option value="Kvinna">Kvinna</option>
-                <option value="Both">Båda</option>
-            </select>
-
-            <label for="age">Ålder:</label>
-            <select name="age" id="age">
-                <option value=30>30-34</option>
-                <option value=35>35-39</option>
-                <option value=40>40-44</option>
-                <option value=45>45-49</option>
-                <option value=50>50-54</option>
-                <option value=55>55-59</option>
+            <label for="theBook">Book:</label>
+            <select name="theBook" id="theBook" onchange="main(this)">
+                <option value=TheFellowshipOfTheRing>The Fellowship Of The Ring</option>
+                <option value=TheTwoTowers>The Two Towers</option>
+                <option value=TheReturnOfTheKing>The Return Of The King</option>
             </select>
             <button id="btn">Skapa</button>
         </form>
-
         <div id="chart"></div>
     </div>
 </body>
